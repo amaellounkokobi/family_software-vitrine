@@ -25,7 +25,7 @@
   <g filter="url(#shadow)">
     <rect x="440" y="96" width="320" height="52" rx="14" fill="#ffffff" stroke="#e4e2f2"/>
   </g>
-  <text x="600" y="120" font-size="15" font-weight="700" fill="#1c1b3a" text-anchor="middle">Navigateur · PWA · mobile</text>
+  <text x="600" y="120" font-size="15" font-weight="700" fill="#1c1b3a" text-anchor="middle">Navigateur (ordinateur ou téléphone)</text>
   <text x="600" y="138" font-size="12" fill="#6c6c84" text-anchor="middle">une seule connexion pour toute la suite</text>
 
   <line x1="600" y1="148" x2="600" y2="182" stroke="#6c6c84" stroke-width="2" marker-end="url(#arrow)"/>
@@ -83,7 +83,7 @@
     <path d="M330 470 a16 16 0 0 1 16 -16 h208 a16 16 0 0 1 16 16 v20 h-240 z" fill="#2E6FD0"/>
     <text x="450" y="480" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">FamilyTrip</text>
     <text x="450" y="514" text-anchor="middle" font-weight="600" fill="#1c1b3a">Voyages, itinéraires, bagages</text>
-    <text x="450" y="536" text-anchor="middle">Front React (PWA hors-ligne) · API FastAPI</text>
+    <text x="450" y="536" text-anchor="middle">Front React (mode hors-ligne) · API FastAPI</text>
     <text x="450" y="554" text-anchor="middle">Base PostgreSQL dédiée</text>
     <text x="450" y="574" text-anchor="middle" fill="#6c6c84" font-size="11">données cloisonnées par famille</text>
 

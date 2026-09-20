@@ -74,13 +74,6 @@ Trois convictions structurent le produit :
   </tr>
 </table>
 
-<p align="center">
-  <img src="docs/screenshots/m_food_planner.png" alt="FamilyFood sur mobile" width="24%">
-  &nbsp;&nbsp;
-  <img src="docs/screenshots/m_todo_board.png" alt="FamilyTodo sur mobile" width="24%">
-</p>
-<p align="center"><sub>Responsive sur mobile ; FamilyTrip est en plus une PWA installable, consultable hors connexion.</sub></p>
-
 ## 🏗️ Architecture : comment les briques communiquent
 
 <p align="center">
@@ -101,7 +94,7 @@ Les principes, sans entrer dans les détails d'implémentation :
 
 | Couche | Choix |
 |---|---|
-| **Front** | React, Vite, React Router, composants d'interface communs à toute la suite (toasts, dialogues, menus mobiles), cartes Leaflet côté voyages, PWA avec cache hors-ligne pour FamilyTrip |
+| **Front** | React, Vite, React Router, composants d'interface communs à toute la suite (toasts, dialogues, menus mobiles), cartes Leaflet côté voyages, mode hors-ligne pour consulter un voyage sans réseau (FamilyTrip) |
 | **Internationalisation** | Interface disponible en français, anglais, allemand et espagnol ; contenus du site vitrine éditables via un CMS |
 | **API** | Python · FastAPI · SQLAlchemy · Pydantic — une API par application, documentée automatiquement (OpenAPI) |
 | **Données** | PostgreSQL, une base par application ; données sensibles chiffrées au repos ; migrations SQL versionnées |
@@ -144,7 +137,7 @@ Quelques ordres de grandeur, au moment de cette vitrine :
 
 ## 📌 Statut
 
-Le projet est en **pré-production** : les applications exposées sont durcies, des familles bêta-testeuses l'utilisent au quotidien, et les versions mobiles natives sont à l'étude.
+Le projet est en **pré-production** : les applications exposées sont durcies et des familles bêta-testeuses l'utilisent au quotidien. Il n'existe pas d'application mobile : la suite s'utilise depuis un navigateur.
 
 ---
 

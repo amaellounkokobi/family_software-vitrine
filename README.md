@@ -47,117 +47,39 @@ Trois convictions structurent le produit :
 
 ## 📸 Captures d'écran
 
-### Site vitrine & hub
-
 <table>
   <tr>
-    <td width="50%"><img src="docs/screenshots/hub_landing.png" alt="Page d'accueil du site vitrine"></td>
-    <td width="50%"><img src="docs/screenshots/hub_dashboard.png" alt="Tableau de bord du hub : les applications de la famille"></td>
+    <td width="50%"><img src="docs/screenshots/hub_landing.png" alt="Site vitrine — accueil"></td>
+    <td width="50%"><img src="docs/screenshots/hub_dashboard.png" alt="Hub — tableau de bord"></td>
   </tr>
   <tr>
     <td align="center"><sub>Site vitrine — accueil</sub></td>
-    <td align="center"><sub>Hub — tableau de bord, une connexion pour toutes les apps</sub></td>
+    <td align="center"><sub>Hub — une connexion, toutes les apps</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="docs/screenshots/hub_family.png" alt="Gestion de la famille et des invitations"></td>
-    <td width="50%"><img src="docs/screenshots/hub_product_food.png" alt="Page produit FamilyFood du site vitrine"></td>
+    <td width="50%"><img src="docs/screenshots/food_planner.png" alt="FamilyFood — planning des repas"></td>
+    <td width="50%"><img src="docs/screenshots/trip_detail.png" alt="FamilyTrip — fiche voyage"></td>
   </tr>
   <tr>
-    <td align="center"><sub>Hub — membres de la famille et invitations</sub></td>
-    <td align="center"><sub>Site vitrine — page produit (FamilyFood)</sub></td>
+    <td align="center"><sub>FamilyFood — planning de la semaine</sub></td>
+    <td align="center"><sub>FamilyTrip — fiche voyage, budget et météo</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/todo_board.png" alt="FamilyTodo — tableau Kanban"></td>
+    <td width="50%"><img src="docs/screenshots/expense_dashboard.png" alt="FamilyExpense — tableau de bord"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>FamilyTodo — tableau Kanban par membre</sub></td>
+    <td align="center"><sub>FamilyExpense — répartition et évolution mensuelle</sub></td>
   </tr>
 </table>
 
-### FamilyFood
-
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/food_planner.png" alt="Planning des repas de la semaine"></td>
-    <td width="50%"><img src="docs/screenshots/food_dishes.png" alt="Carnet de recettes"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Planning de la semaine — glisser-déposer</sub></td>
-    <td align="center"><sub>Carnet de recettes, filtré par catégorie</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="docs/screenshots/food_shopping.png" alt="Liste de courses générée depuis le planning"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><sub>Liste de courses générée automatiquement depuis le menu de la semaine</sub></td>
-  </tr>
-</table>
-
-### FamilyTrip
-
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/trip_trips.png" alt="Mes voyages"></td>
-    <td width="50%"><img src="docs/screenshots/trip_detail.png" alt="Fiche d'un voyage avec météo"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Mes voyages (importés depuis le catalogue de modèles)</sub></td>
-    <td align="center"><sub>Fiche voyage — description, dates, budget, météo</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/trip_activities.png" alt="Planning des activités"></td>
-    <td width="50%"><img src="docs/screenshots/trip_budget.png" alt="Budget du voyage"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>« On fait quoi ? » — planning des activités</sub></td>
-    <td align="center"><sub>« Ça coûte combien ? » — budget prévu / dépensé par poste</sub></td>
-  </tr>
-</table>
-
-### FamilyTodo
-
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/todo_board.png" alt="Tableau Kanban des tâches"></td>
-    <td width="50%"><img src="docs/screenshots/todo_calendar.png" alt="Vue calendrier de la semaine"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Tableau Kanban — filtré par membre</sub></td>
-    <td align="center"><sub>Calendrier de la semaine</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="docs/screenshots/todo_stats.png" alt="Statistiques par membre"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><sub>Statistiques — qui a fait quoi cette semaine</sub></td>
-  </tr>
-</table>
-
-### FamilyExpense
-
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/expense_dashboard.png" alt="Tableau de bord d'un compte"></td>
-    <td width="50%"><img src="docs/screenshots/expense_transactions.png" alt="Liste des transactions"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Tableau de bord d'un compte — répartition et évolution mensuelle</sub></td>
-    <td align="center"><sub>Transactions du foyer</sub></td>
-  </tr>
-</table>
-
-### Sur mobile
-
-Les quatre applications et le hub sont responsives ; FamilyTrip est en plus une PWA installable, consultable hors connexion pendant le voyage.
-
-<table>
-  <tr>
-    <td width="25%"><img src="docs/screenshots/m_hub_dashboard.png" alt="Hub sur mobile"></td>
-    <td width="25%"><img src="docs/screenshots/m_food_planner.png" alt="FamilyFood sur mobile"></td>
-    <td width="25%"><img src="docs/screenshots/m_todo_board.png" alt="FamilyTodo sur mobile"></td>
-    <td width="25%"><img src="docs/screenshots/m_expense_transactions.png" alt="FamilyExpense sur mobile"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Hub</sub></td>
-    <td align="center"><sub>FamilyFood</sub></td>
-    <td align="center"><sub>FamilyTodo</sub></td>
-    <td align="center"><sub>FamilyExpense</sub></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="docs/screenshots/m_food_planner.png" alt="FamilyFood sur mobile" width="24%">
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/m_todo_board.png" alt="FamilyTodo sur mobile" width="24%">
+</p>
+<p align="center"><sub>Responsive sur mobile ; FamilyTrip est en plus une PWA installable, consultable hors connexion.</sub></p>
 
 ## 🏗️ Architecture : comment les briques communiquent
 

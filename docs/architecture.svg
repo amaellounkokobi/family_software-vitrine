@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Schéma simplifié de communication entre les applications Suite Family" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6c6c84"/>
+    </marker>
+    <marker id="arrowHub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5246e5"/>
+    </marker>
+    <linearGradient id="hubGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2850"/>
+      <stop offset="100%" stop-color="#1c1b3a"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1c1b3a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" rx="20" fill="#fbfbfe"/>
+
+  <!-- Titre -->
+  <text x="50" y="48" font-size="22" font-weight="800" fill="#1c1b3a">Comment les briques communiquent</text>
+  <text x="50" y="72" font-size="13" fill="#6c6c84">Vue simplifiée — les détails d'implémentation (adresses, ports, secrets, routes) sont volontairement omis.</text>
+
+  <!-- Utilisateurs -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="96" width="320" height="52" rx="14" fill="#ffffff" stroke="#e4e2f2"/>
+  </g>
+  <text x="600" y="120" font-size="15" font-weight="700" fill="#1c1b3a" text-anchor="middle">Navigateur · PWA · mobile</text>
+  <text x="600" y="138" font-size="12" fill="#6c6c84" text-anchor="middle">une seule connexion pour toute la suite</text>
+
+  <line x1="600" y1="148" x2="600" y2="182" stroke="#6c6c84" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="612" y="170" font-size="11" fill="#6c6c84">HTTPS</text>
+
+  <!-- Reverse proxy : point d'entrée unique -->
+  <rect x="50" y="184" width="1100" height="40" rx="12" fill="#ecebf3" stroke="#d9d7ea"/>
+  <text x="600" y="209" font-size="13" font-weight="700" fill="#3a3a52" text-anchor="middle">Reverse proxy · TLS — point d'entrée unique, chaque brique reste isolée derrière</text>
+
+  <line x1="600" y1="224" x2="600" y2="256" stroke="#6c6c84" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Hub -->
+  <g filter="url(#shadow)">
+    <rect x="410" y="258" width="380" height="112" rx="16" fill="url(#hubGrad)"/>
+  </g>
+  <rect x="410" y="258" width="380" height="6" rx="3" fill="#5246e5"/>
+  <text x="600" y="292" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">Suite Family — le hub</text>
+  <g font-size="11.5" font-weight="600" fill="#e4e2f2" text-anchor="middle">
+    <rect x="428" y="306" width="108" height="24" rx="12" fill="#ffffff" fill-opacity="0.10"/><text x="482" y="322">Compte &amp; famille</text>
+    <rect x="546" y="306" width="108" height="24" rx="12" fill="#ffffff" fill-opacity="0.10"/><text x="600" y="322">SSO</text>
+    <rect x="664" y="306" width="108" height="24" rx="12" fill="#ffffff" fill-opacity="0.10"/><text x="718" y="322">Abonnements</text>
+    <rect x="466" y="336" width="120" height="24" rx="12" fill="#ffffff" fill-opacity="0.10"/><text x="526" y="352">Site vitrine · CMS</text>
+    <rect x="614" y="336" width="120" height="24" rx="12" fill="#ffffff" fill-opacity="0.10"/><text x="674" y="352">Communauté</text>
+  </g>
+
+  <!-- SSO : distribution vers les apps -->
+  <line x1="600" y1="370" x2="600" y2="412" stroke="#5246e5" stroke-width="2.5"/>
+  <line x1="170" y1="412" x2="1030" y2="412" stroke="#5246e5" stroke-width="2.5"/>
+  <g stroke="#5246e5" stroke-width="2.5" marker-end="url(#arrowHub)">
+    <line x1="170" y1="412" x2="170" y2="452"/>
+    <line x1="450" y1="412" x2="450" y2="452"/>
+    <line x1="750" y1="412" x2="750" y2="452"/>
+    <line x1="1030" y1="412" x2="1030" y2="452"/>
+  </g>
+  <rect x="616" y="376" width="330" height="30" rx="8" fill="#eceafb"/>
+  <text x="781" y="395" font-size="12" font-weight="600" fill="#5246e5" text-anchor="middle">SSO : jeton signé, court, limité à une famille et un niveau d'accès</text>
+  <!-- canal interne retour -->
+  <line x1="584" y1="410" x2="584" y2="372" stroke="#9a9ab2" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <rect x="254" y="376" width="322" height="30" rx="8" fill="#ffffff" stroke="#e4e2f2"/>
+  <text x="415" y="395" font-size="12" fill="#6c6c84" text-anchor="middle">canal interne : vérification du jeton, profil famille, plan</text>
+
+  <!-- Apps -->
+  <g font-size="12" fill="#3a3a52">
+    <!-- FamilyTodo -->
+    <g filter="url(#shadow)"><rect x="50" y="454" width="240" height="132" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <path d="M50 470 a16 16 0 0 1 16 -16 h208 a16 16 0 0 1 16 16 v20 h-240 z" fill="#D31FA8"/>
+    <text x="170" y="480" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">FamilyTodo</text>
+    <text x="170" y="514" text-anchor="middle" font-weight="600" fill="#1c1b3a">Tâches &amp; routines de la maison</text>
+    <text x="170" y="536" text-anchor="middle">Front React · API FastAPI</text>
+    <text x="170" y="554" text-anchor="middle">Base PostgreSQL dédiée</text>
+    <text x="170" y="574" text-anchor="middle" fill="#6c6c84" font-size="11">données cloisonnées par famille</text>
+
+    <!-- FamilyTrip -->
+    <g filter="url(#shadow)"><rect x="330" y="454" width="240" height="132" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <path d="M330 470 a16 16 0 0 1 16 -16 h208 a16 16 0 0 1 16 16 v20 h-240 z" fill="#2E6FD0"/>
+    <text x="450" y="480" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">FamilyTrip</text>
+    <text x="450" y="514" text-anchor="middle" font-weight="600" fill="#1c1b3a">Voyages, itinéraires, bagages</text>
+    <text x="450" y="536" text-anchor="middle">Front React (PWA hors-ligne) · API FastAPI</text>
+    <text x="450" y="554" text-anchor="middle">Base PostgreSQL dédiée</text>
+    <text x="450" y="574" text-anchor="middle" fill="#6c6c84" font-size="11">données cloisonnées par famille</text>
+
+    <!-- FamilyFood -->
+    <g filter="url(#shadow)"><rect x="630" y="454" width="240" height="132" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <path d="M630 470 a16 16 0 0 1 16 -16 h208 a16 16 0 0 1 16 16 v20 h-240 z" fill="#10b981"/>
+    <text x="750" y="480" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">FamilyFood</text>
+    <text x="750" y="514" text-anchor="middle" font-weight="600" fill="#1c1b3a">Repas, recettes, courses</text>
+    <text x="750" y="536" text-anchor="middle">Front React · API FastAPI</text>
+    <text x="750" y="554" text-anchor="middle">Base PostgreSQL dédiée</text>
+    <text x="750" y="574" text-anchor="middle" fill="#6c6c84" font-size="11">données cloisonnées par famille</text>
+
+    <!-- FamilyExpense -->
+    <g filter="url(#shadow)"><rect x="910" y="454" width="240" height="132" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <path d="M910 470 a16 16 0 0 1 16 -16 h208 a16 16 0 0 1 16 16 v20 h-240 z" fill="#5246e5"/>
+    <text x="1030" y="480" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">FamilyExpense</text>
+    <text x="1030" y="514" text-anchor="middle" font-weight="600" fill="#1c1b3a">Budget &amp; dépenses du foyer</text>
+    <text x="1030" y="536" text-anchor="middle">Front React · API FastAPI</text>
+    <text x="1030" y="554" text-anchor="middle">Base PostgreSQL dédiée</text>
+    <text x="1030" y="574" text-anchor="middle" fill="#6c6c84" font-size="11">données cloisonnées par famille</text>
+  </g>
+
+  <!-- Passerelles inter-apps -->
+  <g stroke="#9a9ab2" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="290" y1="530" x2="330" y2="530"/>
+    <line x1="570" y1="530" x2="630" y2="530"/>
+    <line x1="870" y1="530" x2="910" y2="530"/>
+  </g>
+  <text x="600" y="612" font-size="12" fill="#6c6c84" text-anchor="middle">⇄ passerelles entre apps (un repas devient une tâche, une liste de courses rejoint un voyage…) · partage entre familles amies (fil d'actualité, import)</text>
+
+  <!-- Services transverses -->
+  <g stroke="#9a9ab2" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)">
+    <line x1="250" y1="586" x2="250" y2="652"/>
+    <line x1="620" y1="586" x2="620" y2="652"/>
+    <line x1="960" y1="586" x2="960" y2="652"/>
+  </g>
+
+  <g font-size="12" fill="#3a3a52">
+    <g filter="url(#shadow)"><rect x="50" y="654" width="400" height="86" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <text x="250" y="684" font-size="14" font-weight="800" fill="#1c1b3a" text-anchor="middle">Backoffice interne</text>
+    <text x="250" y="704" text-anchor="middle">supervision, catalogue de contenus prêts à l'emploi,</text>
+    <text x="250" y="722" text-anchor="middle">édition du site vitrine (CMS), tâches planifiées</text>
+
+    <g filter="url(#shadow)"><rect x="480" y="654" width="280" height="86" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <text x="620" y="684" font-size="14" font-weight="800" fill="#1c1b3a" text-anchor="middle">Serveur d'images</text>
+    <text x="620" y="704" text-anchor="middle">médias des recettes, voyages,</text>
+    <text x="620" y="722" text-anchor="middle">profils — servis par un nginx dédié</text>
+
+    <g filter="url(#shadow)"><rect x="790" y="654" width="360" height="86" rx="16" fill="#ffffff" stroke="#e4e2f2"/></g>
+    <text x="970" y="684" font-size="14" font-weight="800" fill="#1c1b3a" text-anchor="middle">Emails transactionnels</text>
+    <text x="970" y="704" text-anchor="middle">bienvenue, invitations dans la famille,</text>
+    <text x="970" y="722" text-anchor="middle">réinitialisation, alertes</text>
+  </g>
+
+  <!-- Légende -->
+  <g font-size="11.5" fill="#6c6c84">
+    <line x1="50" y1="774" x2="90" y2="774" stroke="#6c6c84" stroke-width="2"/>
+    <text x="98" y="778">flux utilisateur (HTTPS)</text>
+    <line x1="260" y1="774" x2="300" y2="774" stroke="#5246e5" stroke-width="2.5"/>
+    <text x="308" y="778">connexion unique (SSO) du hub vers les apps</text>
+    <line x1="580" y1="774" x2="620" y2="774" stroke="#9a9ab2" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="628" y="778">échanges serveur-à-serveur sur le réseau interne (jamais exposés)</text>
+  </g>
+</svg>
